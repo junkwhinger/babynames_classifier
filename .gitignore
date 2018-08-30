@@ -38,7 +38,7 @@ Temporary Items
 
 
 # trained model weight
-.tar
+.pth.tar
 
 # End of https://www.gitignore.io/api/macos,jupyternotebook
 
