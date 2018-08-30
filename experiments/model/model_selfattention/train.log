@@ -1,0 +1,37 @@
+2018-08-30 11:33:54,235:INFO: Loading the datasets...
+2018-08-30 11:33:54,618:INFO: - done.
+2018-08-30 11:34:47,174:INFO: Loading the datasets...
+2018-08-30 11:34:47,547:INFO: - done.
+2018-08-30 11:35:49,545:INFO: Loading the datasets...
+2018-08-30 11:35:49,927:INFO: - done.
+2018-08-30 11:35:49,947:INFO: Starting training for 6 epoch(s)
+2018-08-30 11:35:49,948:INFO: Epoch 1/6
+2018-08-30 11:41:35,549:INFO: - Train metrics: loss: 1.934, acc: 0.805, prec_0: 0.826, prec_1: 0.774, reca_0: 0.843, reca_1: 0.751
+2018-08-30 11:43:13,194:INFO: Loading the datasets...
+2018-08-30 11:43:13,583:INFO: - done.
+2018-08-30 11:43:13,602:INFO: Starting training for 6 epoch(s)
+2018-08-30 11:43:13,602:INFO: Epoch 1/6
+2018-08-30 11:48:52,998:INFO: - Train metrics: loss: 1.922, acc: 0.805, prec_0: 0.827, prec_1: 0.773, reca_0: 0.841, reca_1: 0.754
+2018-08-30 11:48:56,219:INFO: - Eval metrics: loss: 0.723, acc: 0.938, prec_0: 1.000, prec_1: 0.933, reca_0: 0.500, reca_1: 1.000
+2018-08-30 11:48:56,265:INFO: - Found new best accuracy
+2018-08-30 11:48:56,268:INFO: Epoch 2/6
+2018-08-30 11:54:38,228:INFO: - Train metrics: loss: 1.688, acc: 0.838, prec_0: 0.865, prec_1: 0.802, reca_0: 0.858, reca_1: 0.810
+2018-08-30 11:54:42,048:INFO: - Eval metrics: loss: 0.692, acc: 0.875, prec_0: 0.500, prec_1: 0.929, reca_0: 0.500, reca_1: 0.929
+2018-08-30 11:54:42,216:INFO: Epoch 3/6
+2018-08-30 13:47:38,739:INFO: - Train metrics: loss: 1.631, acc: 0.843, prec_0: 0.871, prec_1: 0.806, reca_0: 0.860, reca_1: 0.820
+2018-08-30 13:47:44,904:INFO: - Eval metrics: loss: 0.571, acc: 0.875, prec_0: 0.500, prec_1: 0.929, reca_0: 0.500, reca_1: 0.929
+2018-08-30 13:47:45,090:INFO: Epoch 4/6
+2018-08-30 13:54:04,283:INFO: - Train metrics: loss: 1.606, acc: 0.856, prec_0: 0.880, prec_1: 0.822, reca_0: 0.871, reca_1: 0.835
+2018-08-30 13:54:09,561:INFO: - Eval metrics: loss: 0.511, acc: 0.875, prec_0: 0.500, prec_1: 0.929, reca_0: 0.500, reca_1: 0.929
+2018-08-30 13:54:09,716:INFO: Epoch 5/6
+2018-08-30 14:00:25,795:INFO: - Train metrics: loss: 1.595, acc: 0.862, prec_0: 0.887, prec_1: 0.827, reca_0: 0.875, reca_1: 0.843
+2018-08-30 14:00:30,834:INFO: - Eval metrics: loss: 0.515, acc: 0.875, prec_0: 0.500, prec_1: 0.929, reca_0: 0.500, reca_1: 0.929
+2018-08-30 14:00:30,988:INFO: Epoch 6/6
+2018-08-30 14:06:47,871:INFO: - Train metrics: loss: 1.581, acc: 0.869, prec_0: 0.892, prec_1: 0.838, reca_0: 0.883, reca_1: 0.851
+2018-08-30 14:06:52,906:INFO: - Eval metrics: loss: 0.513, acc: 0.938, prec_0: 1.000, prec_1: 0.933, reca_0: 0.500, reca_1: 1.000
+2018-08-30 17:11:42,540:INFO: Loading the datasets...
+2018-08-30 17:11:42,916:WARNING: The `device` argument should be set by using `torch.device` or passing a string as an argument. This behavior will be deprecated soon and currently defaults to cpu.
+2018-08-30 17:11:42,916:WARNING: The `device` argument should be set by using `torch.device` or passing a string as an argument. This behavior will be deprecated soon and currently defaults to cpu.
+2018-08-30 17:11:42,919:INFO: - done.
+2018-08-30 17:11:42,938:INFO: Starting training for 6 epoch(s)
+2018-08-30 17:11:42,938:INFO: Epoch 1/6
