@@ -44,9 +44,7 @@ def train(model, optimizer, loss_fn, data_iterator, params, num_steps):
     metric_watcher = utils.MetricCalculator()
 
     # Use tqdm for progress bar
-    t  = trange(num_steps)
-    for i in t:
-        batch = next(iter(data_iterator))
+    for ix, batch in enumerate(data_iterator):
         train_batch = batch.babyname.to(device)
         labels_batch = batch.sex.to(device)
         labels_batch.data.sub_(1)
@@ -69,27 +67,9 @@ def train(model, optimizer, loss_fn, data_iterator, params, num_steps):
         # performs updates using calculated gradients
         optimizer.step()
 
-        # Evaluate summaries only once in a while
-        if i % params.save_summary_steps == 0:
-
-            # # compute all metrics on the batch
-            # summary_batch = {metric: metrics[metric](output_batch, labels_batch) for metric in metrics}
-            # summary_batch['loss'] = loss.item()
-            # summ.append(summary_batch)
-            # acc_avg.update(summary_batch['accuracy'])
-
-        # update the average loss
-        # loss_avg.update(loss.item())
-        # t.set_postfix(loss='{:05.3f}'.format(loss_avg()), acc='{:05.3f}'.format(acc_avg()))
-            metric_watcher.calculate_metric()
-        t.set_postfix(loss='{:05.3f}'.format(metric_watcher.average_loss),
-                      acc='{:05.3f}'.format(metric_watcher.accuracy),
-                      prec_0='{:05.3f}'.format(metric_watcher.precision_0),
-                      prec_1='{:05.3f}'.format(metric_watcher.precision_1),
-                      reca_0='{:05.3f}'.format(metric_watcher.recall_0),
-                      reca_1='{:05.3f}'.format(metric_watcher.recall_1))
 
     # compute mean of all metrics in summary
+    metric_watcher.calculate_metric()
     metrics_string = "loss: {:05.3f}, acc: {:05.3f}, prec_0: {:05.3f}, prec_1: {:05.3f}, reca_0: {:05.3f}, reca_1: {:05.3f}".format(
         metric_watcher.average_loss,
         metric_watcher.accuracy,

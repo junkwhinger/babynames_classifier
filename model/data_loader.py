@@ -16,6 +16,8 @@ class DataLoader(object):
         #                       tokenize=utils.tokenizer, fix_length=20,
         #                       batch_first=True, init_token="<bos>", eos_token="<eos>")
 
+        device = torch.device(params.device)
+
         self.BABYNAME = data.Field(sequential=True, pad_first=True,
                                    tokenize=utils.tokenizer,
                                    batch_first=True, init_token="<bos>", eos_token="<eos>")
@@ -30,7 +32,7 @@ class DataLoader(object):
         self.build_vocab()
 
         self.train_iter, self.val_iter = data.BucketIterator.splits(
-            (self.train_ds, self.val_ds), batch_sizes=(params.batch_size, params.batch_size), device=-1,
+            (self.train_ds, self.val_ds), batch_sizes=(params.batch_size, params.batch_size), device=device,
             repeat=False, sort_key=lambda x: len(x.babyname))
 
 
@@ -39,7 +41,7 @@ class DataLoader(object):
         self.SEX.build_vocab(self.train_ds, self.val_ds)
         print("vocab built")
 #
-# model_dir = '../experiments/nb_hops/nb_hops_5'
+# model_dir = '../experiments/model/model_selfattention'
 # json_path = os.path.join(model_dir, 'params.json')
 # params = utils.Params(json_path)
 # data_dir = '../data/full_version'
@@ -54,3 +56,5 @@ class DataLoader(object):
 # sample = next(iter(data_loader.train_iter))
 # print(sample.babyname[0,:])
 # print(data_loader.BABYNAME.vocab.stoi)
+#
+# print(data_loader.val_ds)

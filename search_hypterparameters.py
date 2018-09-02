@@ -49,7 +49,7 @@ if __name__ == "__main__":
     params = utils.Params(json_path)
 
     search_field = args.parent_dir.split("/")[1]
-    search_area = ['selfattention', 'bilstm']
+    search_area = ["bilstm"]
     for search_param in search_area:
 
         params.__dict__[search_field] = search_param
