@@ -4,7 +4,7 @@ import os
 import shutil
 
 import torch
-from sklearn.metrics import accuracy_score, precision_score, recall_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix
 
 class Params():
     """Class that loads hyperparameters from a json file.
@@ -97,6 +97,10 @@ class MetricCalculator():
         self.recall_0 = recall_score(actual_labels, predicted_labels, pos_label=0)
         self.recall_1 = recall_score(actual_labels, predicted_labels, pos_label=1)
         self.average_loss = self.loss_accumulated / self.updated_cnt
+
+        print("--")
+        print(confusion_matrix(actual_labels, predicted_labels))
+        print("--")
 
     def reset(self):
         self.accuracy = 0

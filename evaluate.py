@@ -28,8 +28,7 @@ def evaluate(model, loss_fn, data_iterator, params, num_steps):
     metric_watcher = utils.MetricCalculator()
 
     # compute metrics over the dataset
-    for _ in range(num_steps):
-        batch = next(iter(data_iterator))
+    for ix, batch in enumerate(data_iterator):
         train_batch = batch.babyname.to(device)
         labels_batch = batch.sex.to(device)
         labels_batch.data.sub_(1)
